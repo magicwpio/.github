@@ -9,7 +9,7 @@
 **Managed WordPress cloud hosting with AI tools and developer workflows.**
 Built for fast, secure websites that scale without the hassle.
 
-[Website](https://magicwp.io) · [Docs](https://docs.magicwp.io) · [MCP docs](https://docs.magicwp.io/mcp) · [X](https://x.com/magicwp_io) · [LinkedIn](https://www.linkedin.com/company/magicwp-io) · [YouTube](https://www.youtube.com/@magicwp_io)
+[Website](https://magicwp.io) · [Docs](https://docs.magicwp.io) · [API docs](https://docs.magicwp.io/api) · [MCP docs](https://docs.magicwp.io/mcp) · [X](https://x.com/magicwp_io) · [LinkedIn](https://www.linkedin.com/company/magicwp-io) · [YouTube](https://www.youtube.com/@magicwp_io)
 
 </div>
 
@@ -24,8 +24,9 @@ MagicWP runs WordPress sites on dedicated cloud servers, so each site gets its o
 | Project | What it does |
 | --- | --- |
 | [MagicWP hosting](https://magicwp.io) | Managed WordPress hosting with staging, backups, caching and one-click updates. |
+| [MagicWP API](https://github.com/magicwpio/api) | Manage sites, backups, domains and more from your own code. OpenAPI spec and examples in curl, Node, Python and PHP. |
 | [Claude Code plugin](https://github.com/magicwpio/mcp) | Create sites, run updates, restore backups and check site health from Claude Code, in plain words. |
-| [Documentation](https://docs.magicwp.io) | Guides for hosting, domains, backups, PHP, caching and the MCP server. |
+| [Documentation](https://docs.magicwp.io) | Guides for hosting, domains, backups, PHP and caching, plus the API reference and the MCP server. |
 
 ## Quick start: manage your sites from Claude Code
 
@@ -36,11 +37,21 @@ claude plugin install magicwp@magicwp
 
 Then start Claude Code, run `/mcp`, pick `magicwp` and choose Authenticate. You sign in through your browser, so there is no API token to copy. Full steps are in the [plugin README](https://github.com/magicwpio/mcp#readme).
 
+## Quick start: the API
+
+Create a token in the dashboard under **Settings → API tokens**, then:
+
+```bash
+curl https://api.magicwp.io/v1/sites -H "Authorization: Bearer $MAGICWP_TOKEN"
+```
+
+More examples are in [magicwpio/api](https://github.com/magicwpio/api).
+
 ## Get help
 
 - Using MagicWP: start with the [docs](https://docs.magicwp.io), or email [sudo@magicwp.io](mailto:sudo@magicwp.io).
 - Bug or idea for one of our open source projects: open an issue in that repository.
-- Security problem: please email us instead of opening a public issue.
+- Security problem: email [security@magicwp.io](mailto:security@magicwp.io) instead of opening a public issue.
 
 ## License
 
